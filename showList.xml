@@ -1,7 +1,8 @@
 <show id="testshow">
 	<showtitle>Title</showtitle>
 	<day>Tuesday</day>
-	<time>1030A</time>
+	<starttime>1030</starttime>
+	<endtime>1200</endtime>
 	<djs>Alex Muench and John Quinn</djs>
 	<showpic>title.jpg</showpic>
 	<showinfo>This is a show on the radio, they play music</showinfo>
