@@ -21,13 +21,13 @@ xmlDoc = xmlHttp.responseXML.documentElement;
 
 function pageInit()
 {
-	alert("preInitLibary");
+	//alert("preInitLibary");
 	parseXML();
-	alert("XML Loaded");
+	//alert("XML Loaded");
 	var dayTag = xmlDoc.getElementsByTagName('day');
 	var currentDay = dateTime.getUTCDay();
 	generateCurrentTime();
-	alert('time generated');
+	//alert('time generated');
 	//adjusts day to eastern time from UTC
 	if (currentMinutes > 1260)
 	{
@@ -37,13 +37,14 @@ function pageInit()
 			currentDay = 7;
 		}
 	}
-	alert("starting daytag loop");
+	//alert("starting daytag loop");
 	//gets list of all shows with matching date
 	for (i=0; i<dayTag.length; i++)
 	{
-		alert("Current day = " + dayArray[currentDay] + " Show Day = " + dayTag[i].childNodes[0].nodeValue);
+		//alert("Current day = " + dayArray[currentDay] + " Show Day = " + dayTag[i].childNodes[0].nodeValue);
 		if (dayTag[i].childNodes[0].nodeValue == dayArray[currentDay])
 		{
+			//alert("Found Matching Day at i=" + i);
 			showNumbers.push(i)
 		}
 	}
@@ -51,6 +52,7 @@ function pageInit()
 	var startTimes = xmlDoc.getElementsByTagName('starttime');
 	var endTimes = xmlDoc.getElementsByTagName('endtime');
 	var isDefault = true;
+	//alert("Start: " + startTimes[showNumbers[0]].childNodes[0].nodeValue + "|End: " + endTimes[showNumbers[0]].childNodes[0].nodeValue + "|Current : " + currentMinutes);
 	for (j=0; j<showNumbers.length; j++)
 	{
 		if (currentMinutes >= startTimes[showNumbers[j]].childNodes[0].nodeValue && currentMinutes < endTimes[showNumbers[j]].childNodes[0].nodeValue )
@@ -61,11 +63,14 @@ function pageInit()
 		}
 	}
 	//sets default case if true
-	if (isDefault == true)
+	if (!isDefault)
 	{
-		setDefault();
-	}else{
+		//alert('Setting Current');
 		setCurrent();
+	}else{
+		//alert('Setting default');
+		setDefault();
+		//alert('Defaults Set');
 	}
 }
 
@@ -77,11 +82,11 @@ function generateCurrentTime()
 }
 
 function setDefault(){
-	$("showPic").setAttribute("src", xmlDoc.getElementById('defaultImage').childNodes[0].nodeValue);
-	$("showTitle").innerHTML = xmlDoc.getElementById('defaultTitle').childNodes[0].nodeValue;
-	$("djNames").innerHTML = xmlDoc.getElementById('defaultDJ').childNodes[0].nodeValue;
-	$("showTime").innerHTML = xmlDoc.getElementById('defaultShowTime').childNodes[0].nodeValue;
-	$("showInfo").innerHTML = xmlDoc.getElementById('defaultInfo').childNodes[0].nodeValue;
+	$("showPic").setAttribute("src", xmlDoc.getElementsByTagName('dshowpic')[0].childNodes[0].nodeValue);
+	$("showTitle").innerHTML = xmlDoc.getElementsByTagName('dtitle')[0].childNodes[0].nodeValue;
+	$("djNames").innerHTML = xmlDoc.getElementsByTagName('ddjs')[0].childNodes[0].nodeValue;
+	$("showTime").innerHTML = xmlDoc.getElementsByTagName('dshowtime')[0].childNodes[0].nodeValue;
+	$("showInfo").innerHTML = xmlDoc.getElementsByTagName('dinfo')[0].childNodes[0].nodeValue;
 }
 
 function setCurrent(){
