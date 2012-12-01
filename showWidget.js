@@ -86,7 +86,7 @@ function setDefault(){
 	$("showTitle").innerHTML = xmlDoc.getElementsByTagName('dtitle')[0].childNodes[0].nodeValue;
 	$("djNames").innerHTML = xmlDoc.getElementsByTagName('ddjs')[0].childNodes[0].nodeValue;
 	$("showTime").innerHTML = xmlDoc.getElementsByTagName('dshowtime')[0].childNodes[0].nodeValue;
-	$("showInfo").innerHTML = xmlDoc.getElementsByTagName('dinfo')[0].childNodes[0].nodeValue;
+	$("showinfo").innerHTML = xmlDoc.getElementsByTagName('dinfo')[0].childNodes[0].nodeValue;
 }
 
 function setCurrent(){
@@ -94,5 +94,5 @@ function setCurrent(){
 	$("showTitle").innerHTML = xmlDoc.getElementsByTagName('showtitle')[currentShow].childNodes[0].nodeValue;
 	$("djNames").innerHTML = xmlDoc.getElementsByTagName('djs')[currentShow].childNodes[0].nodeValue;
 	$("showTime").innerHTML = xmlDoc.getElementsByTagName('showtime')[currentShow].childNodes[0].nodeValue;
-	$("showInfo").innerHTML = xmlDoc.getElementsByTagName('showinfo')[currentShow].childNodes[0].nodeValue;
+	$("showinfo").innerHTML = xmlDoc.getElementsByTagName('showinfo')[currentShow].childNodes[0].nodeValue;
 }

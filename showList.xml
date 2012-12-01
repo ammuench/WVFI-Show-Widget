@@ -1,12 +1,12 @@
 <showdata>
 	<show id="testshow">
 		<showtitle>John and Alex's Radio Show</showtitle>
-		<day>Thursday</day>
+		<day>Sunday</day>
 	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
-		<starttime>750</starttime>
+		<starttime>90</starttime>
 		<endtime>900</endtime>
 	  <!--showtime value is for changing values in HTML-->
-		<showtime>10:00AM-12:00PM</showtime>
+		<showtime>1:30AM-12:00PM</showtime>
 		<djs>Alex Muench and John Quinn</djs>
 		<showpic>alexjohn.jpg</showpic>
 		<showinfo>This is a show on the radio, they play music</showinfo>
