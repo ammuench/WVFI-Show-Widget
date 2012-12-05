@@ -32,7 +32,7 @@ function pageInit()
 		currentDay--;
 		if (currentDay < 0)
 		{
-			currentDay = 7;
+			currentDay = 6;
 		}
 	}
 	//gets list of all shows with matching date
