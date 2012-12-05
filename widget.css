@@ -1,0 +1,54 @@
+body {
+	width: 800px;
+	background-color: 999999;
+	margin: auto;
+	font-family: Tahoma, Sans-Serif;
+}
+
+h1{
+	text-align: center;
+}
+
+div#radioshow {
+	width: 600px;
+	height: 200px;
+	background-color: 660000;
+	margin: auto;
+	border-radius: 10px;
+	padding: 15px;
+	text-align: none;
+}
+
+#image{
+	float:left;
+
+	margin-top: 34px;
+}
+
+#info{
+	float: right;
+	height: 200px;
+	width: 460px;;
+	color: white;
+}
+
+#info #buttonwrap{
+	float: right;
+	margin-top: -175px;
+}
+
+
+
+#info p{
+	font-style: italic;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#calendar{
+	text-align: center;
+}

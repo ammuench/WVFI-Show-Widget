@@ -2,17 +2,26 @@
 	<head>
 		<title>WVFI Show Widget</title>
 		<script type="text/javascript" src="showWidget.js"></script>
+		<link rel="stylesheet" href="widget.css" />
+		<!--[if lt IE 9]>
+		<script src="dist/html5shiv.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<h1>WVFI RADIO CURRENT SHOW:</h1>
 		<div id="radioshow">
-			<img src="img.jpg" id="showPic" />
-			<h2 id="showTitle">Show Title!!!</h2>
-			<h3 id="djNames">DJ Names</h3>
-			<h3 id="showTime">Show Time</h3>
-			<p id="showinfo">Information about the current show.  Style, favorite music, what they like, etc.</p>
+			<div id="image">
+				<img src="img.jpg" id="showPic" />
+			</div>
+			<div id="info">
+				<h2 id="showTitle">Show Title!!!</h2>
+				<h3 id="djNames">DJ Names</h3>
+				<h3 id="showTime">Show Time</h3>
+				<p id="showinfo">Information about the current show.  Style, favorite music, what they like, etc.</p>
+				<div id="buttonwrap"><button type="button" onclick="pageInit();">Refresh Info</button></div>
+			</div>
 		</div>
-		<button type="button" onclick="pageInit();">Refresh Info</button>
+		
 		<br />
 		<div id="calendar">
 			<button type="button" onclick="generateCalendar();">MakeCalendar</button>

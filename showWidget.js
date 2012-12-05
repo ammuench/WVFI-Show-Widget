@@ -6,17 +6,13 @@ var currentDay = dateTime.getUTCDay();
 var currentMinutes;
 var showNumbers = new Array();
 var currentShow;
-//seek show global variables
-var seekTime;
-var seekNumber;
 
 //startup code
 window.onload = pageInit;
 function $(id) { return document.getElementById(id); }
-//document.getElementById("nextButton").onclick = seekForward;
-//logic start
-//xml loading script
 
+//LOGIC START
+//XML load fucnction
 function parseXML() 
 { 
 xmlHttp = new window.XMLHttpRequest();
@@ -24,17 +20,14 @@ xmlHttp.open("GET","showList.xml",false);
 xmlHttp.send(null);
 xmlDoc = xmlHttp.responseXML.documentElement;
 }
-
+//main function
 function pageInit()
 {
-	//alert("preInitLibary");
 	parseXML();
-	//alert("XML Loaded");
 	var dayTag = xmlDoc.getElementsByTagName('day');
 	generateCurrentTime();
-	//alert('time generated');
 	//adjusts day to eastern time from UTC
-	if (currentMinutes > 1260)
+	if (currentMinutes > 1139)
 	{
 		currentDay--;
 		if (currentDay < 0)
@@ -42,15 +35,12 @@ function pageInit()
 			currentDay = 7;
 		}
 	}
-	//alert("starting daytag loop");
 	//gets list of all shows with matching date
 	showNumbers = [];
 	for (i=0; i<dayTag.length; i++)
 	{
-		//alert("Current day = " + dayArray[currentDay] + " Show Day = " + dayTag[i].childNodes[0].nodeValue);
 		if (dayTag[i].childNodes[0].nodeValue == dayArray[currentDay])
 		{
-			//alert("Found Matching Day at i=" + i);
 			showNumbers.push(i)
 		}
 	}
@@ -58,9 +48,9 @@ function pageInit()
 	var startTimes = xmlDoc.getElementsByTagName('starttime');
 	var endTimes = xmlDoc.getElementsByTagName('endtime');
 	var isDefault = true;
-	//alert("Start: " + startTimes[showNumbers[0]].childNodes[0].nodeValue + "|End: " + endTimes[showNumbers[0]].childNodes[0].nodeValue + "|Current : " + currentMinutes);
 	for (j=0; j<showNumbers.length; j++)
 	{
+		//checks to see if currentMinutes is a value within a show's start and end value
 		if (currentMinutes >= startTimes[showNumbers[j]].childNodes[0].nodeValue && currentMinutes < endTimes[showNumbers[j]].childNodes[0].nodeValue )
 		{
 			isDefault = false;
@@ -68,26 +58,29 @@ function pageInit()
 
 		}
 	}
-	//sets default case if true
+	//sets default case if true, matching show if false
 	if (!isDefault)
 	{
-		//alert('Setting Current');
 		setCurrent();
 	}else{
-		//alert('Setting default');
 		setDefault();
-		//alert('Defaults Set');
 	}
 }
 
+//fetches current time and sets vars
 function generateCurrentTime()
 {
 	dateTime = new Date();
 	currentMinutes = dateTime.getUTCHours() * 60;
 	currentMinutes += dateTime.getUTCMinutes();
 	currentMinutes -= 300;
+	if (currentMinutes < 0)
+	{
+		currentMinutes = 1440 + currentMinutes;
+	}
 }
 
+//sets Default show case in HTML
 function setDefault(){
 	$("showPic").setAttribute("src", xmlDoc.getElementsByTagName('dshowpic')[0].childNodes[0].nodeValue);
 	$("showTitle").innerHTML = xmlDoc.getElementsByTagName('dtitle')[0].childNodes[0].nodeValue;
@@ -96,6 +89,7 @@ function setDefault(){
 	$("showinfo").innerHTML = xmlDoc.getElementsByTagName('dinfo')[0].childNodes[0].nodeValue;
 }
 
+//sets Current show in HTML
 function setCurrent(){
 	$("showPic").setAttribute("src", xmlDoc.getElementsByTagName('showpic')[currentShow].childNodes[0].nodeValue);
 	$("showTitle").innerHTML = xmlDoc.getElementsByTagName('showtitle')[currentShow].childNodes[0].nodeValue;
@@ -104,6 +98,7 @@ function setCurrent(){
 	$("showinfo").innerHTML = xmlDoc.getElementsByTagName('showinfo')[currentShow].childNodes[0].nodeValue;
 }
 
+//generates a schedule for the appropriate day
 function generateCalendar(){
 	$("calendarTitle").innerHTML = "Show Calendar for " + dayArray[currentDay];
 	$("calendarList").innerHTML = "";

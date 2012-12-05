@@ -1,19 +1,7 @@
 <showdata>
-	<show id="show1">
-		<showtitle>John and Alex's Radio Show</showtitle>
-		<day>Tuesday</day>
-	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
-		<starttime>540</starttime>
-		<endtime>630</endtime>
-	  <!--showtime value is for changing values in HTML-->
-		<showtime>9AM-10:30AM</showtime>
-		<djs>Alex Muench and John Quinn</djs>
-		<showpic>alexjohn.jpg</showpic>
-		<showinfo>This is a show on the radio, they play music</showinfo>
-	</show>
 	<show id="show2">
-		<showtitle>John and Alex's OtherRadio Show</showtitle>
-		<day>Tuesday</day>
+		<showtitle>Radio Show # 4</showtitle>
+		<day>Wednesday</day>
 	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
 		<starttime>630</starttime>
 		<endtime>720</endtime>
@@ -23,6 +11,31 @@
 		<showpic>alexjohn.jpg</showpic>
 		<showinfo>This is a show on the radio, they play music</showinfo>
 	</show>
+	<show id="show1">
+		<showtitle>Radio Show # 1</showtitle>
+		<day>Tuesday</day>
+	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
+		<starttime>540</starttime>
+		<endtime>630</endtime>
+	  <!--showtime value is for changing values in HTML-->
+		<showtime>9:00AM-10:30AM</showtime>
+		<djs>Alex Muench and John Quinn</djs>
+		<showpic>alexjohn.jpg</showpic>
+		<showinfo>This is a show on the radio, they play music</showinfo>
+	</show>
+		<show id="show3">
+		<showtitle>Radio Show # 3</showtitle>
+		<day>Tuesday</day>
+	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
+		<starttime>720</starttime>
+		<endtime>840</endtime>
+	  <!--showtime value is for changing values in HTML-->
+		<showtime>12:00PM-2:00PM</showtime>
+		<djs>Alex Muench and John Quinn</djs>
+		<showpic>alexjohn.jpg</showpic>
+		<showinfo>This is a show on the radio, they play music</showinfo>
+	</show>
+
 	<defaultshow>
 		<dtitle>Overnight Shuffle</dtitle>
 		<dshowtime>Off the air</dshowtime>
