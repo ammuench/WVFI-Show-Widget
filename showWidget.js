@@ -73,6 +73,7 @@ function generateCurrentTime()
 	dateTime = new Date();
 	currentMinutes = dateTime.getUTCHours() * 60;
 	currentMinutes += dateTime.getUTCMinutes();
+	currentDay = dateTime.getUTCDay();
 	currentMinutes -= 300;
 	if (currentMinutes < 0)
 	{
