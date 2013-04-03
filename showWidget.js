@@ -6,6 +6,27 @@ var currentDay = dateTime.getUTCDay();
 var currentMinutes;
 var showNumbers = new Array();
 var currentShow;
+var dayCutoff = 1139;
+
+// DST check
+// A free script from: www.mresoftware.com
+function DST(){
+	var today = new Date;
+	var yr = today.getFullYear();
+	var dst_start = new Date("March 14, "+yr+" 02:00:00"); // 2nd Sunday in March can't occur after the 14th 
+	var dst_end = new Date("November 07, "+yr+" 02:00:00"); // 1st Sunday in November can't occur after the 7th
+	var day = dst_start.getUTCDay(); // day of week of 14th
+	dst_start.setDate(14-day); // Calculate 2nd Sunday in March of this year
+	day = dst_end.getUTCDay(); // day of the week of 7th
+	dst_end.setDate(7-day); // Calculate first Sunday in November of this year
+	if (today >= dst_start && today < dst_end){ //does today fall inside of DST period?
+		currentMinutes += 60;
+		dayCutoff +=60;
+	}else{
+		currentMinutes += 0;
+	}
+
+}
 
 //startup code
 window.onload = pageInit;
@@ -23,11 +44,16 @@ xmlDoc = xmlHttp.responseXML.documentElement;
 //main function
 function pageInit()
 {
+	alert("Currentday_start:"+currentDay);
+
+
+
 	parseXML();
 	var dayTag = xmlDoc.getElementsByTagName('day');
 	generateCurrentTime();
+	alert("Current Minutes = " + currentMinutes);
 	//adjusts day to eastern time from UTC
-	if (currentMinutes > 1139)
+	if (currentMinutes > dayCutoff)
 	{
 		currentDay--;
 		if (currentDay < 0)
@@ -35,6 +61,7 @@ function pageInit()
 			currentDay = 6;
 		}
 	}
+	alert("Current Day = " + currentDay);
 	//gets list of all shows with matching date
 	showNumbers = [];
 	for (i=0; i<dayTag.length; i++)
@@ -50,6 +77,7 @@ function pageInit()
 	var isDefault = true;
 	for (j=0; j<showNumbers.length; j++)
 	{
+		alert("Testing Shownumber: " + showNumbers[j] + "||ST:" + startTimes[showNumbers[j]].childNodes[0].nodeValue + "||ET:" + endTimes[showNumbers[j]].childNodes[0].nodeValue + "||CT:" + currentMinutes);
 		//checks to see if currentMinutes is a value within a show's start and end value
 		if (currentMinutes >= startTimes[showNumbers[j]].childNodes[0].nodeValue && currentMinutes < endTimes[showNumbers[j]].childNodes[0].nodeValue )
 		{
@@ -75,6 +103,9 @@ function generateCurrentTime()
 	currentMinutes += dateTime.getUTCMinutes();
 	currentDay = dateTime.getUTCDay();
 	currentMinutes -= 300;
+	alert("Currentday_gentime:"+currentDay);
+	DST();
+	alert("Currentday_gentime_postDST:"+currentDay);
 	if (currentMinutes < 0)
 	{
 		currentMinutes = 1440 + currentMinutes;
@@ -106,7 +137,7 @@ function generateCalendar(){
 	var lastShowStart = 0;
 	var startTimes = xmlDoc.getElementsByTagName('starttime');
 	var endTimes = xmlDoc.getElementsByTagName('endtime');
-	for (i=0; i<1440; i++)
+	for (i=0; i<=1440; i++)
 	{
 		for (j=0; j<showNumbers.length; j++)
 		{
