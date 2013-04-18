@@ -1,46 +1,547 @@
 <showdata>
-	<show id="show2">
-		<showtitle>Radio Show # 2</showtitle>
-		<day>Thursday</day>
-	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
-		<starttime>630</starttime>
-		<endtime>720</endtime>
-	  <!--showtime value is for changing values in HTML-->
-		<showtime>10:30AM-12:00PM</showtime>
-		<djs>Alex and John</djs>
-		<showpic>2.jpg</showpic>
-		<showinfo>This is a show on the radio, Alex and John play music</showinfo>
-	</show>
-	<show id="show1">
-		<showtitle>Radio Show # 1</showtitle>
-		<day>Thursday</day>
-	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
-		<starttime>540</starttime>
-		<endtime>630</endtime>
-	  <!--showtime value is for changing values in HTML-->
-		<showtime>9:00AM-10:30AM</showtime>
-		<djs>Alex</djs>
-		<showpic>1.jpg</showpic>
-		<showinfo>This is a show on the radio, Alex plays music</showinfo>
-	</show>
-		<show id="show3">
-		<showtitle>Radio Show # 3</showtitle>
-		<day>Thursday</day>
-	  <!--start times and end times must be in minutes, for example, 10:30AM would be 630 minutes-->
-		<starttime>720</starttime>
-		<endtime>840</endtime>
-	  <!--showtime value is for changing values in HTML-->
-		<showtime>12:00PM-2:00PM</showtime>
-		<djs>John</djs>
-		<showpic>3.jpg</showpic>
-		<showinfo>This is a show on the radio, John plays music</showinfo>
-	</show>
+<defaultshow>
+  <dshowpic>default.jpg</dshowpic>
+  <dtitle>WVFI Auto-Shuffle</dtitle>
+  <ddjs>http://last.fm/user/WVFI</ddjs>
+  <dshowtime>No show scheduled, or WVFI is closed for the night</dshowtime>
+  <showinfo>_</showinfo>
+</defaultshow>
+<show>
+  <showtitle>Under the Dome</showtitle> 
+  <day>Monday</day> 
+  <starttime>540</starttime> 
+  <endtime>600</endtime> 
+  <showtime>9 AM - 112 AM</showtime> 
+  <djs>Rich Hidy</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
 
-	<defaultshow>
-		<dtitle>Overnight Shuffle</dtitle>
-		<dshowtime>Off the air</dshowtime>
-		<ddjs>WVFI</ddjs>
-		<dshowpic>default.jpg</dshowpic>
-		<dinfo>No one is on air right now, so the overnight shuffle is playing!</dinfo>
-	</defaultshow>
+<show>
+  <showtitle>Trizi and Friends</showtitle> 
+  <day>Monday</day> 
+  <starttime>900</starttime> 
+  <endtime>990</endtime> 
+  <showtime>3 PM - 430 PM</showtime> 
+  <djs>Patrizia Martellaro</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Tonight with Angelo and Robert</showtitle> 
+  <day>Monday</day> 
+  <starttime>1020</starttime> 
+  <endtime>1080</endtime> 
+  <showtime>5 PM - 6 PM</showtime> 
+  <djs>Angelo Calderon and Robert Dorenbusch</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Coast to Coast</showtitle> 
+  <day>Monday</day> 
+  <starttime>1080</starttime> 
+  <endtime>1140</endtime> 
+  <showtime>6 PM - 7 PM</showtime> 
+  <djs>Andrew Gastelum and Mike Monaco</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Andrew Smith</showtitle> 
+  <day>Monday</day> 
+  <starttime>1170</starttime> 
+  <endtime>1260</endtime> 
+  <showtime>730 PM - 9 PM</showtime> 
+  <djs>Andrew Smith</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Classics with Aeneas</showtitle> 
+  <day>Monday</day> 
+  <starttime>1260</starttime> 
+  <endtime>1350</endtime> 
+  <showtime>9 PM - 1030 PM</showtime> 
+  <djs>Jack Jacobs</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Two Horsemen Sports Talk Show</showtitle> 
+  <day>Monday</day> 
+  <starttime>1350</starttime> 
+  <endtime>1440</endtime> 
+  <showtime>1030 PM - 12 AM</showtime> 
+  <djs>Mike McCarty and Brian Metz</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Straight Out of the Dungeons of Rap</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>1440</starttime> 
+  <endtime>105</endtime> 
+  <showtime>12 AM - 145 AM</showtime> 
+  <djs>Mia Lillis</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Mainstream Indie Smoothie</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>480</starttime> 
+  <endtime>540</endtime> 
+  <showtime>8 AM - 9 AM</showtime> 
+  <djs>Claire Stephens</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Shuffle</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>1020</starttime> 
+  <endtime>1080</endtime> 
+  <showtime>5 PM - 6 PM</showtime> 
+  <djs>Danielle Thelen</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Title</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>1080</starttime> 
+  <endtime>1140</endtime> 
+  <showtime>6 PM - 7 PM</showtime> 
+  <djs>Ana Arredondo, Becca O'Neil, Cam Kupfer, and Hillary Mangioforte</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Title</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>1140</starttime> 
+  <endtime>1170</endtime> 
+  <showtime>7 PM - 730 PM</showtime> 
+  <djs>Mike Monaco and Connor Malone</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Title</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>1170</starttime> 
+  <endtime>1260</endtime> 
+  <showtime>730 PM - 9 PM</showtime> 
+  <djs>John Quinn, Tom McGuire, and Kurt Beatty</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Andres Vidaurre</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>1260</starttime> 
+  <endtime>1350</endtime> 
+  <showtime>9 PM - 1030 PM</showtime> 
+  <djs>Andres Vidaurre</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Title</showtitle> 
+  <day>Tuesday</day> 
+  <starttime>1350</starttime> 
+  <endtime>0</endtime> 
+  <showtime>1030 PM - 12 AM</showtime> 
+  <djs>Eric Secviar</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Humor Artists' Radio Hour</showtitle> 
+  <day>Thursday</day> 
+  <starttime>0</starttime> 
+  <endtime>105</endtime> 
+  <showtime>12 AM - 145 AM</showtime> 
+  <djs>Alec Vanthournout and Brian Rodgers</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Cupcakes and Awkward Smiles</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>900</starttime> 
+  <endtime>960</endtime> 
+  <showtime>3 PM - 4 PM</showtime> 
+  <djs>Katie Ferrello and Cailin Gillespie</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Feelin' Folky</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>960</starttime> 
+  <endtime>1020</endtime> 
+  <showtime>4 PM - 5 PM</showtime> 
+  <djs>Melissa Jordan</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Dre and Rae Show</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>1020</starttime> 
+  <endtime>1080</endtime> 
+  <showtime>5 PM - 6 PM</showtime> 
+  <djs>Rachel Lee and Andi Cescolini</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Tom and Nate Show</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>1080</starttime> 
+  <endtime>1110</endtime> 
+  <showtime>6 PM - 630 PM</showtime> 
+  <djs>Nate Wickham and Tom Voutsos</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Radio Show Formall Known as Untitled</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>1140</starttime> 
+  <endtime>1170</endtime> 
+  <showtime>7 PM - 730 PM</showtime> 
+  <djs>Mike Magdziarz</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Shut Up and Play the Hits</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>1170</starttime> 
+  <endtime>1260</endtime> 
+  <showtime>730 PM - 9 PM</showtime> 
+  <djs>Matt Munhall</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>I've Made a Huge Mistake</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>1260</starttime> 
+  <endtime>1350</endtime> 
+  <showtime>9 PM - 1030 PM</showtime> 
+  <djs>Pat Nguyen and Dan Brown</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Student Stand Up Sit Down Radio Show</showtitle> 
+  <day>Wednesday</day> 
+  <starttime>1350</starttime> 
+  <endtime>1440</endtime> 
+  <showtime>1030 PM - 12 AM</showtime> 
+  <djs>Robert Reichle</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Bear Foot Contessa</showtitle> 
+  <day>Thursday</day> 
+  <starttime>1020</starttime> 
+  <endtime>1080</endtime> 
+  <showtime>5 PM - 6 PM</showtime> 
+  <djs>Julia Bontemp</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>On the Scene with Chaz and Chad</showtitle> 
+  <day>Thursday</day> 
+  <starttime>1080</starttime> 
+  <endtime>1110</endtime> 
+  <showtime>6 PM - 630 PM</showtime> 
+  <djs>Michael Varraveto</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Regular Expressions</showtitle> 
+  <day>Thursday</day> 
+  <starttime>1110</starttime> 
+  <endtime>1170</endtime> 
+  <showtime>630 PM - 730 PM</showtime> 
+  <djs>Alex Muench</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Adam Newman Show</showtitle> 
+  <day>Thursday</day> 
+  <starttime>1170</starttime> 
+  <endtime>1200</endtime> 
+  <showtime>7 30 PM - 8:00 PM</showtime> 
+  <djs>Adam Newman</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Music Committee</showtitle> 
+  <day>Thursday</day> 
+  <starttime>1170</starttime> 
+  <endtime>1260</endtime> 
+  <showtime>730 PM - 9 PM</showtime> 
+  <djs>Music Committee</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Title</showtitle> 
+  <day>Thursday</day> 
+  <starttime>1260</starttime> 
+  <endtime>1350</endtime> 
+  <showtime>9 PM - 1030 PM</showtime> 
+  <djs>Cameron Goodman</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Bangers and Mash</showtitle> 
+  <day>Thursday</day> 
+  <starttime>1350</starttime> 
+  <endtime>0</endtime> 
+  <showtime>1030 PM - 12 AM</showtime> 
+  <djs>Quinn Dolan</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Where in the World is Maggie?</showtitle> 
+  <day>Friday</day> 
+  <starttime>0</starttime> 
+  <endtime>105</endtime> 
+  <showtime>12 AM - 145 AM</showtime> 
+  <djs>Maggie Waickman</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Audio Addiction</showtitle> 
+  <day>Friday</day> 
+  <starttime>660</starttime> 
+  <endtime>720</endtime> 
+  <showtime>11 AM - 12 PM</showtime> 
+  <djs>Christine Anspach</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Beekeepers' Arcade</showtitle> 
+  <day>Friday</day> 
+  <starttime>780</starttime> 
+  <endtime>840</endtime> 
+  <showtime>1 PM - 2 PM</showtime> 
+  <djs>Helen Zhang and Abby Johnson</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Flavor of the Week</showtitle> 
+  <day>Friday</day> 
+  <starttime>840</starttime> 
+  <endtime>900</endtime> 
+  <showtime>2 PM - 3 PM</showtime> 
+  <djs>Viktoria Vakulenko</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Show</showtitle> 
+  <day>Friday</day> 
+  <starttime>900</starttime> 
+  <endtime>960</endtime> 
+  <showtime>3 PM - 4 PM</showtime> 
+  <djs>Matt Coats and Julaine Zenk</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Hair of the Dog</showtitle> 
+  <day>Friday</day> 
+  <starttime>960</starttime> 
+  <endtime>1020</endtime> 
+  <showtime>4 PM - 5 PM</showtime> 
+  <djs>Phil Zeiss</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Dare of the Hog</showtitle> 
+  <day>Friday</day> 
+  <starttime>1020</starttime> 
+  <endtime>1080</endtime> 
+  <showtime>5 PM - 6 PM</showtime> 
+  <djs>Grayson Nowak</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>In the Zone with Deeps and Lolar</showtitle> 
+  <day>Friday</day> 
+  <starttime>1110</starttime> 
+  <endtime>1140</endtime> 
+  <showtime>630 PM - 7 PM</showtime> 
+  <djs>Dylan Parent and Lauren Morisseau</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Off the Record</showtitle> 
+  <day>Friday</day> 
+  <starttime>1140</starttime> 
+  <endtime>1200</endtime> 
+  <showtime>7 PM - 8 PM</showtime> 
+  <djs>Sam Jones</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Anything Goes</showtitle> 
+  <day>Friday</day> 
+  <starttime>1200</starttime> 
+  <endtime>1350</endtime> 
+  <showtime>8 PM - 1030 PM</showtime> 
+  <djs>Caila Poythress and Rebecca O'Neil</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Tale of Two Cities</showtitle> 
+  <day>Saturday</day> 
+  <starttime>840</starttime> 
+  <endtime>960</endtime> 
+  <showtime>2 PM - 4 PM</showtime> 
+  <djs>Brooke Kovanda and Sarah Connors</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Four Winged Dinosaur</showtitle> 
+  <day>Saturday</day> 
+  <starttime>960</starttime> 
+  <endtime>1020</endtime> 
+  <showtime>4 PM - 5 PM</showtime> 
+  <djs>Betsy Kennedy and Karen Gilmore</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Jelly Bismark</showtitle> 
+  <day>Sunday</day> 
+  <starttime>660</starttime> 
+  <endtime>720</endtime> 
+  <showtime>11 AM - 12 PM</showtime> 
+  <djs>Travis Marshall-Roth</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Top Fives with Cody and Will</showtitle> 
+  <day>Sunday</day> 
+  <starttime>780</starttime> 
+  <endtime>840</endtime> 
+  <showtime>1 PM - 2 PM</showtime> 
+  <djs>Will Hornish and Cody Mason</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Indie Rock Radio and Witty Banter</showtitle> 
+  <day>Sunday</day> 
+  <starttime>960</starttime> 
+  <endtime>1020</endtime> 
+  <showtime>4 PM - 5 PM</showtime> 
+  <djs>Tim Brsnahan, Mike Paluzzi, Connor Fitzgerald</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>Let's Talk Sports</showtitle> 
+  <day>Sunday</day> 
+  <starttime>1140</starttime> 
+  <endtime>1200</endtime> 
+  <showtime>7 PM - 8 PM</showtime> 
+  <djs>Matt Garcia, Jason Popp, Peter Harvey, and Michael O'Brien</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>We Hope You're Not Listening...</showtitle> 
+  <day>Sunday</day> 
+  <starttime>1200</starttime> 
+  <endtime>1260</endtime> 
+  <showtime>8 PM - 9 PM</showtime> 
+  <djs>Catherine Peck-Phillips, Laura Livingston, and Chandler Harvey</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
+
+<show>
+  <showtitle>The Resurrection of Aural Pleasure</showtitle> 
+  <day>Sunday</day> 
+  <starttime>1350</starttime> 
+  <endtime>0</endtime> 
+  <showtime>1030 PM - 12 AM</showtime> 
+  <djs>Michael Strock and Julia Teixeira</djs> 
+  <showpic>default.jpg</showpic> 
+  <showinfo>_</showinfo>
+</show>
 </showdata>

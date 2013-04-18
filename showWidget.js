@@ -23,7 +23,8 @@ function DST(){
 		currentMinutes += 60;
 		dayCutoff +=60;
 	}else{
-		currentMinutes += 0;
+		currentMinutes += 0
+		dayCutoff=0;
 	}
 
 }
